@@ -2,7 +2,7 @@ package homework;
 
 import java.util.Arrays;
 
-public class SecondHomeWork {
+public class SeconHomeWork2 {
     public static void main(String[] args) {
 
         System.out.println("1 Task");
