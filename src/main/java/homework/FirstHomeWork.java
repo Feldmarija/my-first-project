@@ -1,6 +1,6 @@
 package homework;
 
-public class VariablesDataTypes {
+public class FirstHomeWork {
     public static void main(String[] args) {
 
     // byte
