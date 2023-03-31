@@ -12,11 +12,11 @@ public class PezDispenser {
     public int pezCount;
 
 
-    public PezDispenser(String name, String color, String collection, int pezCount) {
+    public PezDispenser(String name, String color, String collection) {
         this.name = name;
         this.color = color;
         this.collection = collection;
-        this.pezCount = 6;
+        this.pezCount = MAX_CAPACITY;
     }
 
     public void load() {
@@ -38,8 +38,11 @@ public class PezDispenser {
     }
 
     public void loadMissingCandies() {
-        pezCount = MAX_CAPACITY;
-        System.out.println("Loading candies till dispenser is full");
+        int difference = MAX_CAPACITY - pezCount;
+        for (int i = 0; i < difference ; i++) {
+            load();
+        }
+        System.out.printf("I loaded: %d candy(ies)\n", + difference);
     }
 
 
@@ -59,11 +62,7 @@ public class PezDispenser {
         } else {
             System.out.println("It's impossible to load " + x + " candies now");
         }
-        
-
-
     }
-
 }
 
 
